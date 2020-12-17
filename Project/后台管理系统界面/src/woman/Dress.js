@@ -1,10 +1,10 @@
-
 import React, { useContext, useState, useEffect, useRef } from 'react';
 import { Table, Input, Button, Form } from 'antd';
 import './add_del_edit.css';
 
 const EditableContext = React.createContext();
 
+//可编辑行
 const EditableRow = ({ index, ...props }) => {
   const [form] = Form.useForm();
   return (
@@ -15,7 +15,7 @@ const EditableRow = ({ index, ...props }) => {
     </Form>
   );
 };
-
+//可编辑单元格
 const EditableCell = ({
   title,
   editable,
@@ -101,26 +101,12 @@ class Dress extends React.Component {
         dataIndex: 'src',
         editable: true,
       },
-      // {
-      //   title: '详情页图1',
-      //   dataIndex: 'srcdetails',
-      //   editable: true,
-      // },
-      // {
-      //   title: '详情页图2',
-      //   dataIndex: 'photo',
-      //   editable: true,
-      // },
-      // {
-      //   title: '详情页图3',
-      //   dataIndex: 'picture',
-      //   editable: true,
-      // },
       {
         title: '类型',
         dataIndex: 'name',
         editable: true,
       },
+
       {
         title: '操作',
         dataIndex: 'operation',
@@ -132,10 +118,7 @@ class Dress extends React.Component {
     ];
     this.state = {
       //设置原始数据
-      dataSource: [
-        
-      ],
-      // count: 4,
+      dataSource: [],
     };
   }
 
@@ -148,7 +131,7 @@ class Dress extends React.Component {
       .then(data => {
         console.log(data)
         this.setState({
-          dataSource:data
+          dataSource: data
         })
       }
       )
@@ -156,19 +139,29 @@ class Dress extends React.Component {
 
   //删除
   handleDelete = (key) => {
-    console.log(key)
+    console.log(key);
     const dataSource = [...this.state.dataSource];
     this.setState({
       dataSource: dataSource.filter((item) => item.id !== key),
     });
-    //打印删除后的数据
-    console.log(this.state.dataSource)
+    //通过接口将数据库中的数据删除
+    let url = 'https://www.youlewazi.top:1234/delete';
+    fetch(url, {
+      method: 'post',
+      body: JSON.stringify({ id: key }),
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        'content-type': 'application/json',
+      },
+      mode: 'cors'
+    })
   };
+
   //添加
   handleAdd = () => {
     const { count, dataSource } = this.state;
     const newData = {
-      id: count,
+      id: '',
       src: '',
       srcdetails: '',
       photo: '',
@@ -178,6 +171,7 @@ class Dress extends React.Component {
       count: count + 1,
     });
   };
+
   //保存信息
   handleSave = (row) => {
     const newData = [...this.state.dataSource];
@@ -187,10 +181,16 @@ class Dress extends React.Component {
     this.setState({
       dataSource: newData,
     });
-    // fetch('https://www.youlewazi.top:1234/increase',{
-    //   method:'post',
-
-    // })
+    //通过接口上传到数据库
+    fetch('https://www.youlewazi.top:1234/increase', {
+      method: 'post',
+      body: JSON.stringify({ id: this.state.dataSource.id,src:this.state.dataSource.src,name:this.state.dataSource.name }),
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        'content-type': 'application/json',
+      },
+      mode: 'cors'
+    })
   };
 
   render() {
@@ -219,7 +219,7 @@ class Dress extends React.Component {
       };
     });
     return (
-      <div style={{width:'900px',float:'right',marginRight:'190px'}}>
+      <div style={{ width: '900px', float: 'right', marginRight: '190px' }}>
         <Button
           onClick={this.handleAdd}
           type="primary"
@@ -233,7 +233,7 @@ class Dress extends React.Component {
           dataSource={dataSource}
           columns={columns}
           style={{
-            marginTop:'10px'
+            marginTop: '10px'
           }}
         />
       </div>

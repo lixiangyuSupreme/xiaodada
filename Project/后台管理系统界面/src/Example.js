@@ -11,21 +11,17 @@ const SubMenu = Menu.SubMenu;
 const MenuItem = Menu.Item;
 
 const HomeLayout =(props)=> {
-
-    // const {children} = this.props;
     return (
-
       <div>
         <header>
-          <div style={{marginTop:'-20px',width:'100%',height:'80px',backgroundColor:'rgb(204,204,214)'}}>
-            <h1 style={{lineHeight:'80px',marginLeft:'100px'}}>嗒嗒我自己后台管理系统</h1>
+          <div style={{marginTop:'-20px',width:'100%',height:'80px',backgroundColor:'rgba(0,0,0,0.5)',color:'white'}}>
+            <h1 style={{lineHeight:'80px',marginLeft:'80px',fontFamily:'宋体'}}>嗒嗒我自己后台管理系统</h1>
             <Foot/>
           </div>
         </header>
-
         <main className={style.main}>
           <div className={style.menu}>
-            <Menu mode='inline' style={{width:'150px',float:'left',height:'1300px',backgroundColor:'rgb(204,204,214)',marginTop:'-18px'}}>
+            <Menu mode='inline' style={{width:'150px',float:'left',height:'1300px',backgroundColor:'rgb(0,0,0,0.5)',marginTop:'-18px',color:'white'}}>
               <SubMenu key="user" title={<span>
                   <UserOutlined />
                   <span>男生穿搭</span></span>}

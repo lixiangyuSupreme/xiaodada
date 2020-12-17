@@ -101,21 +101,6 @@ class Skirt extends React.Component {
         dataIndex: 'src',
         editable: true,
       },
-      // {
-      //   title: '详情页图1',
-      //   dataIndex: 'srcdetails',
-      //   editable: true,
-      // },
-      // {
-      //   title: '详情页图2',
-      //   dataIndex: 'photo',
-      //   editable: true,
-      // },
-      // {
-      //   title: '详情页图3',
-      //   dataIndex: 'picture',
-      //   editable: true,
-      // },
       {
         title: '类型',
         dataIndex: 'name',
@@ -135,7 +120,6 @@ class Skirt extends React.Component {
       dataSource: [
         
       ],
-      // count: 4,
     };
   }
 
@@ -168,7 +152,7 @@ class Skirt extends React.Component {
   handleAdd = () => {
     const { count, dataSource } = this.state;
     const newData = {
-      id: count,
+      id: '',
       src: '',
       srcdetails: '',
       photo: '',
@@ -187,10 +171,6 @@ class Skirt extends React.Component {
     this.setState({
       dataSource: newData,
     });
-    // fetch('https://www.youlewazi.top:1234/increase',{
-    //   method:'post',
-
-    // })
   };
 
   render() {

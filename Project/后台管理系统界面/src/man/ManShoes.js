@@ -132,10 +132,7 @@ class ManShoes extends React.Component {
     ];
     this.state = {
       //设置原始数据
-      dataSource: [
-        
-      ],
-      // count: 4,
+      dataSource: [],
     };
   }
 
@@ -161,14 +158,12 @@ class ManShoes extends React.Component {
     this.setState({
       dataSource: dataSource.filter((item) => item.id !== key),
     });
-    //打印删除后的数据
-    console.log(this.state.dataSource)
   };
   //添加
   handleAdd = () => {
     const { count, dataSource } = this.state;
     const newData = {
-      id: count,
+      id: '',
       src: '',
       srcdetails: '',
       photo: '',

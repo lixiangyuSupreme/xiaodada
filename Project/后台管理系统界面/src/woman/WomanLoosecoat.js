@@ -135,7 +135,6 @@ class WomanLoosecoat extends React.Component {
       dataSource: [
         
       ],
-      // count: 4,
     };
   }
 

@@ -132,10 +132,7 @@ class ManJacket extends React.Component {
     ];
     this.state = {
       //设置原始数据
-      dataSource: [
-        
-      ],
-      // count: 4,
+      dataSource: [],
     };
   }
 
@@ -168,7 +165,7 @@ class ManJacket extends React.Component {
   handleAdd = () => {
     const { count, dataSource } = this.state;
     const newData = {
-      id: count,
+      id: '',
       src: '',
       srcdetails: '',
       photo: '',

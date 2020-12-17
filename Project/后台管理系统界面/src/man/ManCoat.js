@@ -135,7 +135,6 @@ class ManCoat extends React.Component {
       dataSource: [
         
       ],
-      // count: 4,
     };
   }
 
@@ -169,7 +168,7 @@ class ManCoat extends React.Component {
   handleAdd = () => {
     const { count, dataSource } = this.state;
     const newData = {
-      id: count,
+      id: '',
       src: '',
       srcdetails: '',
       photo: '',

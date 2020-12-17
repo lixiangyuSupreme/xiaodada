@@ -135,7 +135,6 @@ class WomanJacket extends React.Component {
       dataSource: [
         
       ],
-      // count: 4,
     };
   }
 
