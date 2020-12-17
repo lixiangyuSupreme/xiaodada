@@ -1,0 +1,10 @@
+.ant-menu-light{
+    list-style: none;
+    margin-left: -15px;
+    font-size: 18px;
+}
+.ant-menu-item{
+    list-style: none;
+    margin-left: -40px;
+    margin-top: 10px;
+}

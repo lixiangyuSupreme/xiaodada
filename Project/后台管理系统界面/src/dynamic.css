@@ -1,0 +1,37 @@
+table{
+    width: 100%;
+}
+/* .ant-table-thead tr{
+    background-color:rgb(204,204,214) ;
+} */
+.ant-table-thead th{
+    border-top: solid black 0.5px;
+}
+.ant-table-thead th:last-child{
+    border-right: solid black 0.5px;
+}
+.ant-table-row td:last-child{
+    border-right: solid black 0.5px;
+}
+.ant-table-cell{
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    border-bottom: solid black 0.5px;
+    border-left: solid black 0.5px;
+}
+/* tbody tr:nth-child(2n){
+    background-color:rgb(204,204,214);
+} */
+.ant-pagination{
+    display: flex;
+    list-style: none;
+}
+.ant-pagination li{
+    margin-left: 2px;
+}
+
+/* 第几页 */
+.ant-pagination-item-active{
+    color:rgb(204,204,214);
+}
