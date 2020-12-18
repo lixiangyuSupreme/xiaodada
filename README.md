@@ -30,111 +30,111 @@
       1.衣服界面（女上衣）
       接口地址：'/womanjacket'
       请求类型：get
-      返回参数：{type:object,data:{id,src,srcdetails,photo,picture,name}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       2.衣服界面（连衣裙）      
       接口地址：'/dress'
       请求类型：get
-      返回参数：{type:object,data:{id,src,srcdetails,photo,picture,name}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       3.衣服界面（头饰）    
       接口地址：'/headwear'
       请求类型：get
-      返回参数：{type:object,data:{id,src,srcdetails,photo,picture,name}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       4.衣服界面（女外套）      
       接口地址：'/womanloosecoat'
       请求类型：get
-      返回参数：{type:object,data:{id,src,srcdetails,photo,picture,name}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       5.衣服界面（女鞋子）     
       接口地址：'/womanshoes'
       请求类型：get
-      返回参数：{type:object,data:{id,src,srcdetails,photo,picture,name}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       6.衣服界面（女裤）    
       接口地址：'/womantrousers'
       请求类型：get
-      返回参数：{type:object,data:{id,src,srcdetails,photo,picture,name}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       7.衣服界面（半身裙）   
       接口地址：'/skirt'
       请求类型：get
-      返回参数：{type:object,data:{id,src,srcdetails,photo,picture,name}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       8.衣服界面（男外套）     
       接口地址：'/mancoat'
       请求类型：get
-      返回参数：{type:object,data:{id,src,srcdetails,photo,picture,name}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       9.衣服界面（男上衣）      
       接口地址：'/manjacket'
       请求类型：get
-      返回参数：{type:object,data:{id,src,srcdetails,photo,picture,name}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       10.衣服界面（男鞋）     
       接口地址：'/manshoes'
       请求类型：get
-      返回参数：{type:object,data:{id,src,srcdetails,photo,picture,name}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       11.衣服界面（男裤）    
       接口地址：'/mantrousers'
       请求类型：get
-      返回参数：{type:object,data:{id,src,srcdetails,photo,picture,name}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
 
 
       12.详情页（连衣裙）     
       接口地址：'/detailspage1'
       请求类型：get
       必选参数：{id}
-      返回参数：{type:object,data:{srcdetails,photo,picture}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       13.详情页（头饰）      
       接口地址：'/detailspage2'
       请求类型：get
       必选参数：{id}
-      返回参数：{type:object,data:{srcdetails,photo,picture}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       14.详情页（女上衣）      
       接口地址：'/detailspage3'
       请求类型：get
       必选参数：{id}
-      返回参数：{type:object,data:{srcdetails,photo,picture}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       15.详情页（女外套）      
       接口地址：'/detailspage4'
       请求类型：get
       必选参数：{id}
-      返回参数：{type:object,data:{srcdetails,photo,picture}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       16.详情页（女鞋）    
       接口地址：'/detailspage5'
       请求类型：get
       必选参数：{id}
-      返回参数：{type:object,data:{srcdetails,photo,picture}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       17.详情页（女裤）     
       接口地址：'/detailspage6'
       请求类型：get
       必选参数：{id}
-      返回参数：{type:object,data:{srcdetails,photo,picture}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       18.详情页（半身裙）     
       接口地址：'/detailspage7'
       请求类型：get
       必选参数：{id}
-      返回参数：{type:object,data:{srcdetails,photo,picture}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       19.详情页（男外套）      
       接口地址：'/detailspage8'
       请求类型：get
       必选参数：{id}
-      返回参数：{type:object,data:{srcdetails,photo,picture}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       20.详情页（男上衣）     
       接口地址：'/detailspage9'
       请求类型：get
       必选参数：{id}
-      返回参数：{type:object,data:{srcdetails,photo,picture}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       21.详情页（男鞋）    
       接口地址：'/detailspage10'
       请求类型：get
       必选参数：{id}
-      返回参数：{type:object,data:{srcdetails,photo,picture}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       22.详情页（男裤）      
       接口地址：'/detailspage11'
       请求类型：get
       必选参数：{id}
-      返回参数：{type:object,data:{srcdetails,photo,picture}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
 
 
       23.搜索框      
       接口地址：'/searchbox/:name'
       请求类型：get
       必选参数：{name}
-      返回参数：{type:object,data:{srcdetails,photo,picture}}
+      返回参数：{type:array,data:[{id,src,srcdetails,photo,picture,name}]}
       24.发布动态       
       接口地址：'/releasenews/:position/:text/:photo'
       请求类型：post
@@ -143,20 +143,20 @@
       25.渲染动态消息页面        
       接口地址：'/information'
       请求类型：get
-      返回参数：{type:object,data:{srcdetails,photo,picture}}
+      返回参数：{type:array,data:[{id,name,heart,comment,position,photo,title}]}
       26.自我发布的动态存储        
       接口地址：'/sharing'
       请求类型：get
-      返回参数：{type:object,data:{srcdetails,photo,picture}}
+      返回参数：{type:array,data:[{id,name,heart,photo,title}]}
       27.点赞内容存储         
       接口地址：'/heart/:id'
       请求类型：post
       必选参数：{id}
-      返回参数：{type:object,data:{srcdetails,photo,picture}}
+      返回参数：{type:array,data:[{id,name,heart,photo,title}]}
       28.渲染点赞内容       
       接口地址：'/like'
       请求类型：get
-      返回参数：{type:object,data:{id,src,srcdetails,photo,picture,name}}
+      返回参数：{type:array,data:[{id,name,heart,photo,title}]}
       29.增加       
       接口地址：'/increase/:src/:srcdetails/:photo/:picture/:text'
       请求类型：post
