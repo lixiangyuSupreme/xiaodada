@@ -1,0 +1,78 @@
+<!--pages/colour/colour.wxml-->
+ <!-- 动画 -->
+ <block wx:if="{{donghua}}">
+  <view class='donghua'>
+    <image bindtap='hua'style='left:{{left1}}px' animation="{{animationData1}}" class='love' src='../../icon/agree.png'></image>
+    <image bindtap='hua'style='left:{{left2}}px' animation="{{animationData2}}" class='love' src='../../icon/agree.png'></image>
+    <image bindtap='hua'style='left:{{left3}}px' animation="{{animationData3}}" class='love' src='../../icon/agree.png'></image>
+    <image bindtap='hua'style='left:{{left4}}px' animation="{{animationData4}}" class='love' src='../../icon/agree.png'></image>
+    <image bindtap='hua'style='left:{{left5}}px' animation="{{animationData5}}" class='love' src='../../icon/agree.png'></image>
+    <image bindtap='hua'style='left:{{left6}}px' animation="{{animationData6}}" class='love' src='../../icon/agree.png'></image>
+    </view>
+  </block>
+  <view class='container'>  
+    <view class="top">
+      <text style="font-family: fantasy;font-style: italic;font-size: 25px;">Welcome to Color Matching</text>
+    </view>
+    <div class="all">
+      <div class="yellow" bindtap="yellow"></div>
+      <div class="red" bindtap="red"></div>
+      <div class="blue" bindtap="blue"></div>
+      <div class="brown" bindtap="brown"></div>
+    </div>
+    <modal title="黄色搭配推荐" hidden="{{YmodalHidden}}" bindconfirm="YmodalConfirm" bindcancel="YmodalCandel">
+      <view>
+        <image class="image" src="../../icon/yellow.jpg" mode='aspectFill'></image>
+      </view>
+      <view>Yellow matching recommendation！</view>
+    </modal>
+    <modal title="红色搭配推荐" hidden="{{RmodalHidden}}" bindconfirm="RmodalConfirm" bindcancel="RmodalCandel">
+      <view>
+        <image class="image" src="../../icon/red.jpg" mode='aspectFill'></image>
+      </view>
+      <view>Red matching recommendation！</view>
+    </modal>
+    <modal title="蓝色搭配推荐" hidden="{{BLmodalHidden}}" bindconfirm="BLmodalConfirm" bindcancel="BLmodalCandel">
+      <view>
+        <image class="image" src="../../icon/blue.jpg" mode='aspectFill'></image>
+      </view>
+      <view>Blue matching recommendation！</view>
+    </modal>
+    <modal title="棕色搭配推荐" hidden="{{BRmodalHidden}}" bindconfirm="BRmodalConfirm" bindcancel="BRmodalCandel">
+      <view>
+        <image class="image" src="../../icon/brown.jpg" mode='aspectFill'></image>
+      </view>
+      <view>Brown matching recommendation！</view>
+    </modal>
+    <div class="catalog">
+      <div class="adjacent"><span bindtap="adjacent" class="text">相邻色搭配:</span>
+        在色环上选择任何一个颜色，它左右两边的颜色就叫做相邻色。这三个色彩中任选两个或者三色一起搭配，出来的效果都很不错。<image src="../../icon/adjacent.png"/></div>
+      <div class="homochromatic" ><span bindtap="homochromatic" class="text">同色系搭配:</span>这个方法超级经典，适用于任何颜色。但在实操过程中，需要注意同色系并不是全身的颜色-样,而是有深有浅，明暗交错，这样搭配出来的感觉是最好的。<image src="../../icon/homochromatic.png"/></div>
+      <div class="complementary"><span bindtap="complementary" class="text">互补色搭配:</span>在色彩环中，180度对角线连起来的两个颜色，我们称之为互补色搭配。红与绿、黄与紫、橙与蓝，是我们常见的互补色搭配。<image src="../../icon/complementary.png"/></div>
+      <div class="colourless"><span bindtap="colourless" class="text">无色彩搭配:</span>无色彩，指的是黑白灰。这是我们留给自己的安全牌，甚至在很多人的衣橱里，只有这三种颜色的衣服。那么这三种几乎是百搭的颜色，还需要刻意去搭配嘛?答案是YES。</div>
+    </div>
+    <modal title="相邻色搭配" hidden="{{Adjacent}}" bindconfirm="Adjacent" bindcancel="Adjacent">
+      <view>
+        <image class="image" src="../../icon/a1.png" mode='aspectFill'></image>
+      </view>
+      <view>希望对您有帮助！</view>
+    </modal>
+    <modal title="同色系搭配" hidden="{{Homochromatic}}" bindconfirm="Homochromatic" bindcancel="Homochromatic">
+      <view>
+        <image class="image" src="../../icon/a2.png" mode='aspectFill'></image>
+      </view>
+      <view>希望对您有帮助！</view>
+    </modal>
+    <modal title="互补色搭配" hidden="{{Complementary}}" bindconfirm="Complementary" bindcancel="Complementary">
+      <view>
+        <image class="image" src="../../icon/a3.png" mode='aspectFill'></image>
+      </view>
+      <view>希望对您有帮助！</view>
+    </modal>
+    <modal title="无色彩搭配" hidden="{{Colourless}}" bindconfirm="Colourless" bindcancel="Colourless">
+      <view>
+        <image class="image" src="../../icon/a4.png" mode='aspectFill'></image>
+      </view>
+      <view>希望对您有帮助！</view>
+    </modal>
+</view>

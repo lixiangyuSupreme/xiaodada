@@ -1,0 +1,87 @@
+<!--pages/square/square.wxml-->
+<view>
+  <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+          <!-- 最初始时的搜索框 -->
+          <view class="weui-search-bar__box">
+              <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+              <input type="text" class="weui-search-bar__input" placeholder="搜索" />
+          </view>
+          <!-- 可编辑时的搜索框 --> 
+          <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+              <icon class="weui-icon-search" type="search" size="14"></icon>
+              <view class="weui-search-bar__text">搜索</view>
+          </label>
+      </view>
+      <!-- 取消搜索 -->
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+  </view>
+</view>
+<!-- <view style="height:100px;width:50px;">
+  <block>
+    <p>123</p>
+  </block>
+</view> -->
+<!-- 瀑布流布局 -->
+<view class="content">
+  <view class="left">
+      <block wx:for="{{haveUrl}}" wx:key="id">
+        <view class="item" bindtap="goToDetailPage" data-index="{{index}}" style="width: 150px;">
+          <image class="item-img" src="{{item.src}}" mode="widthFix"></image>
+          <view class="item-title-box">
+              <navigator url="url" class="item-title">{{item.title}}</navigator>
+          </view>
+          <view class="name">
+              <!-- 头像 -->
+              <image class="item-ava" src="{{item.src}}"></image>
+              <text class="name-title">{{item.name}}</text>
+              <view class="heart_">
+                  <image class="heart" src="../../icon/like.png"></image>
+                  <text>{{heart_num}}</text>
+              </view>
+          </view>
+      </view>
+      </block>
+  </view>
+<!-- <view class="content">
+  <view class="left">
+      <block wx:for="{{note}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+      </block>
+  </view> -->
+  <view class="right">
+      <block wx:for="{{note}}" wx:key="id">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+      </block>
+  </view>
+</view>
+<!--  下面是一个模块 -->
+<template name="item">
+  <view class="item" bindtap="goToDetailPage" data-index="{{index}}">
+      <image class="item-img" src="{{url}}" mode="widthFix"></image>
+      <view class="item-title-box">
+          <navigator url="url" class="item-title">{{title}}</navigator>
+      </view>
+      <view class="name">
+          <!-- 头像 -->
+          <image class="item-ava" src="{{avatar}}"></image>
+          <text class="name-title">{{name}}</text>
+          <view class="heart_">
+              <image class="heart" src="../../icon/like.png"></image>
+              <text>{{heart_num}}</text>
+          </view>
+      </view>
+  </view>
+</template>
+
+<!-- 固定按钮消息悬浮按钮及置顶按钮-->
+<view bindtap="add_jump">
+  <image class="add_icon" src="../../icon/publish.png"></image>
+</view>
+<view bindtap="info_jump">
+  <image class="info_icon" src="../../icon/information.png"></image>
+</view>
+<view>
+  <image class="goTop" src="../../icon/top.png" bindtap="goToAction" wx:if="{{up_show}}"></image>
+</view>
+

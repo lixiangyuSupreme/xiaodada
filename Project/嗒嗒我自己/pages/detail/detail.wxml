@@ -1,0 +1,46 @@
+<view>
+    <view class="user">
+        <image class="user_icon"
+            src="{{datailData.avatar}}">
+        </image>
+        <view class="user_content">
+            <view class="firstline">
+                <view class="username"> 
+                    <text>{{datailData.name}}</text>
+                </view>
+                <image src="../../icon/follow.png" class="follow" bindtap="follow" hidden="{{fHidden}}"></image>
+            </view>
+            <view class="secondline">
+                <image src="../../icon/position.png" class="position_icon"></image>
+                <view class="position">
+                    <text>
+                        {{datailData.position}}
+                    </text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 图片 -->
+    <image src="{{datailData.url}}" class="content_image"></image>
+    <view class="content">{{datailData.title}}</view>
+    <view class="bottom">
+        <!-- <view class="bottom_comment "> -->
+        <image src="../../icon/comment-left.png" class="comment_icon"></image>
+        <input placeholder="说点什么..." class="comment_input" />
+        <!-- </view> -->
+        <!-- <view class="bottom_condition"> -->
+        <image src="../../icon/like.png" class="bottom_image"></image>
+        <text class="num">{{datailData.heart_num}}</text>
+        <!-- <image src="../../icon/star.png"  class="bottom_image"></image>
+            <text class="num">25</text> -->
+        <image src="../../icon/information.png" class="bottom_image"></image>
+        <text class="num">{{datailData.comment_num}}</text>
+        <!-- </view> -->
+
+    </view> 
+
+</view>
+<view>
+<modal title="关注成功" cancel-text="关闭" confirm-text="确定" hidden="{{mHidden}}" bindconfirm="changeModel" bindcancel="cancelModel">
+</modal>
+</view>

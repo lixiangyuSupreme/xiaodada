@@ -1,0 +1,8 @@
+<!--pages/result/result.wxml-->
+
+<view>
+  <p style="margin-top:20px;">您是否在寻找这件单品：</p>
+      <block wx:for="{{result}}"  data-item="item" wx:key="val" style="margin-top:20px">
+        <image class="c" src="{{item.src}}" bindtap="tonew"/>
+      </block>
+      </view>

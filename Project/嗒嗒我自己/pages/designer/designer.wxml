@@ -1,0 +1,35 @@
+<view class="hr"></view>
+<view class="head">
+<view>精选优质设计师</view>
+<view class="right">></view>
+</view>
+<view class="list">
+<template is="cooks" data="{{array}}" />
+</view>
+
+<template name="cooks">
+  <block wx:for="{{array}}">
+    <movable-area>
+    <movable-view direction="horizontal" out-of-bounds="{{true}}" friction="150" x="{{x}}"
+      bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" >
+    <view class="item" bindtap="seeDetail" id="0">
+      <image src="{{item.img}}" style="width:58px;height:58px;border-radius: 40%;"></image>
+    <view class="desc">
+      <view class="title">{{item.title}} </view>
+      <view class="count">
+        <view>{{item.type}}</view>
+        <view class="liulan">{{item.liulan}}</view>
+        <view class="pinglun"> {{item.pinglun}}</view>
+      </view>
+    </view>
+  </view>
+    <view class="hr2"></view>
+    </movable-view>
+    </movable-area>
+    <view class="operations-content" >
+    <view class="operation-button" bindtap="yy" >
+      预约
+    </view>
+  </view>
+  </block>
+  </template>

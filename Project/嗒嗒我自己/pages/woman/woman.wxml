@@ -1,0 +1,118 @@
+<view class='page_row' >
+    <view class="search">
+      <view class="df search_arr">
+        <icon class="searchcion" size='20' type='search'></icon>
+        <input class="aaa"  placeholder="请输入关键字" value="{{searchValue}}" bindinput="find"/>
+      </view>
+    </view>
+    <button class='sousuo' bindtap="click"><text class="ss">搜索</text></button>
+  </view>
+
+
+
+
+
+
+<view class="container">
+    <!-- 左侧栏 -->
+    <view class='nav_left'>
+
+        <view class="nav_left_items {{curNav == 1 ? 'active' : ''}}" bindtap="switchRightTab" data-id="1">
+            上衣
+        </view>
+
+        <view class="nav_left_items {{curNav == 2 ? 'active' : ''}}" bindtap="switchRightTab" data-id="2">
+            裤子
+        </view>
+        <view class="nav_left_items {{curNav == 3 ? 'active' : ''}}" bindtap="switchRightTab" data-id="3">
+            外套
+        </view>
+        <view class="nav_left_items {{curNav == 4 ? 'active' : ''}}" bindtap="switchRightTab" data-id="4">
+            半身裙
+        </view>
+        <view class="nav_left_items {{curNav == 5? 'active' : ''}}" bindtap="switchRightTab" data-id="5">
+            连衣裙
+        </view>
+        <view class="nav_left_items {{curNav == 6? 'active' : ''}}" bindtap="switchRightTab" data-id="6">
+            头饰
+        </view>
+        <view class="nav_left_items {{curNav == 7? 'active' : ''}}" bindtap="switchRightTab" data-id="7">
+            鞋子
+        </view>
+
+    </view>
+    <!-- 右侧栏 -->
+    <view class="nav_right">
+        <view wx:if="{{curNav==1}}">
+            <view class="nav_right_item" wx:key="id">
+                <block wx:for="{{content}}" data-item="item">
+                    <view class="nav_right_items" bindtap="get" data-id="{{item.id}}" wx:key="id">
+                        <image src="{{item.src}}"></image>
+                        <text>{{item.name}}</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view wx:if="{{curNav==2}}">
+            <view class="nav_right_item" wx:key="id">
+                <block wx:for="{{content1}}" data-item="item">
+                    <view class="nav_right_items" bindtap="get1" data-id="{{item.id}}" wx:key="id">
+                        <image src="{{item.src}}"></image>
+                        <text>{{item.name}}</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view wx:if="{{curNav==3}}">
+            <view class="nav_right_item" wx:key="id">
+                <block wx:for="{{content2}}" data-item="item">
+                    <view class="nav_right_items" bindtap="get2" data-id="{{item.id}}" wx:key="id">
+                        <image src="{{item.src}}"></image>
+                        <text>{{item.name}}</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <!-- tttttttttttttttttttttttttt 还是出不来-->
+        <view wx:if="{{curNav==4}}">
+            <view class="nav_right_item" wx:key="id">
+                <block wx:for="{{content3}}" data-item="item">
+                    <view class="nav_right_items" bindtap="get6" data-id="{{item.id}}" wx:key="id">
+                        <image src="{{item.src}}"></image>
+                        <text>{{item.name}}</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view wx:if="{{curNav==5}}">
+            <view class="nav_right_item" wx:key="id">
+                <block wx:for="{{content4}}" data-item="item">
+                    <view class="nav_right_items" bindtap="get3" data-id="{{item.id}}" wx:key="id">
+                        <image src="{{item.src}}"></image>
+                        <text>{{item.name}}</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view wx:if="{{curNav==6}}">
+            <view class="nav_right_item" wx:key="id">
+                <block wx:for="{{content5}}" data-item="item">
+                    <view class="nav_right_items" bindtap="get4" data-id="{{item.id}}" wx:key="id">
+                        <image src="{{item.src}}"></image>
+                        <text>{{item.name}}</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view wx:if="{{curNav==7}}">
+            <view class="nav_right_item" wx:key="id">
+                <block wx:for="{{content6}}" data-item="item">
+                    <view class="nav_right_items" bindtap="get5" data-id="{{item.id}}" wx:key="id">
+                        <image src="{{item.src}}"></image>
+                        <text>{{item.name}}</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+</view>

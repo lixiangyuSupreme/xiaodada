@@ -1,0 +1,28 @@
+<view>
+ <!-- <image class="head-image" src="https://img.alicdn.com/imgextra/https://img.alicdn.com/imgextra/i4/468333872/O1CN01oKxl8l1eTQCDw4nCw_!!468333872.jpg_430x430q90.jpg"></image>
+ <image class="head-image" src="https://img.alicdn.com/imgextra/https://img.alicdn.com/imgextra/i4/468333872/O1CN01oKxl8l1eTQCDw4nCw_!!468333872.jpg_430x430q90.jpg"></image> -->
+
+<!-- 轮播 -->
+<!-- 轮播图 -->
+<swiper previous-margin='50px' next-margin='50px' bindchange="swiperChange" style='height:{{swiperH}};'>
+　　<swiper-item wx:for='{{imgList}}' wx:key=''>
+　　　　<image class='le-img {{nowIdx==index?"le-active":""}}' bindload='getHeight' src='{{item}}' style='height:{{swiperH}};'></image>
+　　</swiper-item>
+</swiper>
+<!-- 轮播图end -->
+<view class="author-date">
+ <image class="avatar" src="https://img.alicdn.com/imgextra/https://img.alicdn.com/imgextra/i4/468333872/O1CN01oKxl8l1eTQCDw4nCw_!!468333872.jpg_430x430q90.jpg"></image>
+ <text class="author">主编小方</text>
+ <text class="const-text">发表于</text>
+ <text class="date">2020.12.11</text>
+ </view>
+ <text class="title">灵动俏皮</text>
+ <view class="tool">
+ <view class="circle-img">
+  <image catchtap="onShareTap" class="share-img" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=261221685,2417750711&fm=15&gp=0.jpg"></image>
+ </view>
+ <view class="horizon"></view>
+ </view>
+ <text class="detail" selectable="true">灵动俏皮风又称洛丽塔风，主要有三大类：① SweetLoveLolita，以粉红、粉蓝、白色等粉色系列为主 ② GothicLolita，多数是黑和白色 ③ ClassicLolita，以简约色调为主。
+ </text>
+</view>

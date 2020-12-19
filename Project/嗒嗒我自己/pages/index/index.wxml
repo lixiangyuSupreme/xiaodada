@@ -1,0 +1,64 @@
+<!--index.wxml-->
+<!-- <view>
+  <image src="../../icon/fang1.jpg" style="height: 500px;" />
+</view> -->
+<view class="container">
+
+  <!-- 搜索框 -->
+  <view class="search">
+      <view class="df search_arr">
+        <icon class="searchcion" size='20' type='search'></icon>
+        <input class="aaa"  placeholder="请输入关键字" value="{{searchValue}}" bindinput="find"/>
+      </view>
+      <button class='sousuo' bindtap="click" style="width:100px;">
+        <text class="ss">搜索</text>
+      </button>
+  </view>
+  <!-- 轮播图 -->
+  <view class='swiperBanner'>
+    <swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}' circular='{{circular}}'>
+      <swiper-item  wx:for="{{imgUrls}}" wx:key="index" >
+        <navigator url="{{item.link}}" open-type="navigate">
+          <image src="{{item.url}}" class="slide-image" mode="aspectFill" id='{{data.id}}' bindtap="jumpages"></image>
+        </navigator> 
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 男女按钮 -->
+  <view class="btns">
+    <view class="buttons1" bindtap="jumpTo1">
+      <text class="btn1">女生穿搭</text>
+    </view>
+    <view class="buttons2" bindtap="jumpTo2">
+      <text class="btn2">男生穿搭</text>
+    </view>
+  </view>
+
+
+
+  <!-- 今天要穿啥 -->
+  <view class="clothes">
+    <span>今天要穿啥</span>
+  </view>
+
+  <!-- 图片列表 -->
+  <view class='selection'>
+    <view class='content'>
+      <view class='content-item' wx:for="{{contentImgUrls}}" wx:key="url" wx:for-item="item">
+        <image src="{{item.url1}}" class="slide-image" mode='scaleToFill'/>
+        <!-- 图片上的文字说明 -->
+        <view class='content-item-title'>
+          <navigator url="{{item.link1}}" open-type="navigate">
+            <text>{{item.title}}</text>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+ 
+</view>

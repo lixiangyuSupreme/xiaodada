@@ -1,0 +1,43 @@
+<view class='container'>  
+  <view class="top">
+    <text style="font-family: fantasy;font-style: italic;font-size: 25px;">Welcome to Figure Judgement</text>
+    <image src="../../icon/shencai.jpg" /></view>
+  <form bindsubmit="formSubmit" bindreset="formReset"> 
+    <view class="flex_y_center_border">
+      <view class="ipt_key">性别</view>
+      <picker class="flex_1" mode='selector' bindchange="bindinput"  data-key="sex" value="{{sexIndex}}" range="{{sex}}">
+        <view class="c_gray" wx:if='{{sexHidden}}' style="color:rgb(145, 143, 143)">请选择性别</view>
+        <view wx:else>{{sex[sexIndex]}}</view>
+      </picker>
+    </view>   
+  <view class="section">  
+    <view class="num1">肩宽：</view>  
+    <input name="num1" type='number' placeholder="请输入你的肩宽" />  
+  </view>  
+  <view class="section">  
+    <view class="num2">胸围：</view>  
+    <input name="num2" type='number' placeholder="请输入你的胸围"/>  
+  </view>  
+  <view class="section">  
+    <view class="num3">腰围：</view>  
+    <input name="num3" type='number' placeholder="请输入你的腰围"/>  
+  </view>  
+  <view class="section">  
+    <view class="num4">臀围：</view>  
+    <input name="num4" type='number' placeholder="请输入你的臀围"/>  
+  </view>  
+  <view class="mark_info" style="margin-top: 20px;">
+    <view class="gpa">
+      <text class="infc">请签收您的身材判定：\n</text>
+      <text>{{content}}</text>
+    </view>
+  </view>
+  <view class="btn-area">  
+    <button formType="submit" class='submit' style="margin-top:10px">确定</button>  
+    <button formType="reset" class='reset' style="margin-top:5px">重置</button>  
+  </view>  
+</form> 
+<view style="margin-top: 20px;"><image src="../../icon/women.jpg" style="width: 130px;height: 100px;"></image>
+  <image src="../../icon/men.jpg" style="width: 130px;height: 100px;margin-left: 10px;"></image></view> 
+
+</view>  

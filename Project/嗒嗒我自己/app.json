@@ -1,0 +1,81 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/home/home",
+    "pages/content/content",
+    "pages/person/person",
+    "pages/navigate/navigate",
+    "pages/contact/contact",
+    "pages/detail/detail",
+    "pages/edit/edit",
+    "pages/info/info",
+    "pages/publish/publish",
+    "pages/square/square",
+    "pages/star/star",
+    "pages/detail1/detail1",
+    "pages/man/man",
+    "pages/woman/woman",
+    "pages/dynamic/dynamic",
+    "pages/plot/plot",
+    "pages/plot1/plot1",
+    "pages/plot2/plot2",
+    "pages/plot3/plot3",
+    "pages/plot6/plot6",
+    "pages/plot5/plot5",
+    "pages/detail2/detail2",
+    "pages/detail3/detail3",
+    "pages/detail4/detail4",
+    "pages/detail5/detail5",
+    "pages/detail6/detail6",
+    "pages/detail7/detail7",
+    "pages/detail8/detail8",
+    "pages/detail9/detail9",
+    "pages/detail10/detail10",
+    "pages/detail11/detail11",
+    "pages/result/result",
+    "pages/new/new",
+    "pages/specil/special",
+    "pages/colour/colour",
+    "pages/designer/designer",
+    "pages/like/like",
+    "pages/last/last"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#94a5ad",
+    "navigationBarTitleText": "嗒嗒我自己",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "selectedColor": "#df4220",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icon/1.png",
+        "selectedIconPath": "icon/1.png"
+      },
+      {
+        "pagePath": "pages/specil/special",
+        "text": "个性化",
+        "iconPath": "icon/shouye.png",
+        "selectedIconPath": "icon/shouye.png"
+      },  
+      {
+        "pagePath": "pages/square/square",
+        "text": "广场",
+        "iconPath": "icon/guangchangsquare106.png",
+        "selectedIconPath": "icon/guangchangsquare106.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "我的",
+        "iconPath": "icon/My.png",
+        "selectedIconPath": "icon/My.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,10 @@
+<!--pages/publish/publish.wxml-->
+<!--pages/publish/publish.wxml-->
+<text>这里是发表页面，可以写一个跳转的页面，在跳转的页面中写发布页面</text>
+<view>
+    <navigator url="/pages/new/new">
+        <button>发表新笔记</button>
+    </navigator>
+    
+</view>
+

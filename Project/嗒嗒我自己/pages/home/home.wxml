@@ -1,0 +1,73 @@
+<!--pages/home/home.wxml-->
+<view class="header">
+  <!-- 代码 -->
+
+
+  <view class="page__bd" style="margin: 20px;width: 50%;height: 30%;">
+    <view class="weui-cells weui-cells_after-title me-info">
+      <view class="weui-cell">
+        <view class="weui-cell__hd" style="position: relative;margin-right: 10px;margin-top: 40px;">
+          <image class="avatar-img" src="{{avatarUrl}}"
+            style="margin-left: 20px; background-color: #94a5ad;width: 70px; height: 70px; display: block;border-radius:35px;"
+            bindtap="clickImage" />
+          <!-- <image src="{{userImg}}" style="background-color: darkgrey; width: 50px; height: 50px; display: block;border-radius:25px;" bindtap="clickImage"/> -->
+        </view>
+
+        <view class="weui-cell__bd" style="margin-left: 25px;">
+          <!-- <button open-type="getUserInfo" bindtap="showUserInfoTap">点击登录</button> -->
+          <text open-type="getUserInfo" bindtap="showUserInfoTap">
+            点击登录</text>
+        </view>
+      </view>
+    </view>
+    <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+      <block wx:for="{{actionSheetItems}}" wx:key="unique">
+        <action-sheet-item bindtap="{{item.bindtap}}">{{item.txt}}</action-sheet-item>
+      </block>
+      <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+    </action-sheet>
+  </view>
+  <view style="margin-left: 170px;margin-top:-30px;width: 50%;height: 30%;">
+    <text>昵称：{{nickName}}</text>
+    <view style="height: 30px;width: 100px;">
+      <!-- <button type="default" bindtap="jumpToMyPage"> 跳到另一个网页 </button> -->
+      <button type="default" bindtap="jumpToMyPage" class="aa"
+        style="margin-top: 20px; width: 100px;height:30px;font-size:12px;background-color:#373838;color:rgb(250, 245, 245);">编辑资料</button>
+    </view>
+    <image class="bg_ware" src="https://moyv.top/wechat/images/bg_wave.gif"></image>
+  </view>
+</view>
+
+<view style="margin-top: 0px;">
+  <view class="tab-container">
+    <view style="margin: 10px;" class="{{currentData== 0 ? 'active':''}}" bindtap="changeTab" data-current="0">我的喜欢▼
+    </view>
+    <view style="margin: 10px;" class="{{currentData== 1 ? 'active':''}}" bindtap="changeTab" data-current="1">我的发布▼
+    </view>
+  </view>
+</view>
+<view style="background-color: #94a5ad;" hidden='{{currentData != 0}}'>
+  <view class="zypb">
+    <block wx:for="{{haveUrl}}" data-item="item" wx:key="id">
+      <view class="idx">
+        <image class="c" src="{{item.src}}" style="width: 120px; height: 150px;margin: 35px;" bindtap="haveImage" />
+        <p style="margin-left: -140px; margin-top: 190px;">点赞数：{{item.heart}}</p>
+      </view>
+    </block>
+  </view>
+</view>
+<view style="background-color: #94a5ad;" hidden='{{currentData != 1}}'>
+ 
+    <view class="zypb">
+      <block wx:for="{{content}}" data-item="item" wx:key="id">
+        <view class="idx">
+          <image class="c" src="{{item.src}}" style="width: 120px; height: 150px;margin: 35px;" bindtap="haveImage" />
+          <p style="margin-left: -140px; margin-top: 190px;">点赞数：{{item.heart}}</p>
+        </view>
+      </block>
+    </view>
+  
+</view>
+
+<!-- <view hidden='{{type != expend}}'>1</view>
+<view hidden='{{type != earning}}'>2</view> -->
