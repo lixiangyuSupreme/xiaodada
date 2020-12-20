@@ -109,10 +109,13 @@ class Dress extends React.Component {
 
       {
         title: '操作',
-        dataIndex: 'operation',
+        dataIndex: 'id',
+        
+        //<a onClick={() => this.handleDelete(record.id)}>Delete</a>
+        
         render: (text, record) =>
           this.state.dataSource.length >= 1 ? (
-            <a onClick={() => this.handleDelete(record.id)}>Delete</a>
+            <a onClick={()=>fetch('https://www.youlewazi.top:1234/delete'+{record}.record).then(this.props.history.go(0))}>Delete</a>
           ) : null,
       },
     ];
@@ -138,24 +141,24 @@ class Dress extends React.Component {
   }
 
   //删除
-  handleDelete = (key) => {
-    console.log(key);
-    const dataSource = [...this.state.dataSource];
-    this.setState({
-      dataSource: dataSource.filter((item) => item.id !== key),
-    });
-    //通过接口将数据库中的数据删除
-    let url = 'https://www.youlewazi.top:1234/delete';
-    fetch(url, {
-      method: 'post',
-      body: JSON.stringify({ id: key }),
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        'content-type': 'application/json',
-      },
-      mode: 'cors'
-    })
-  };
+  // handleDelete = (key) => {
+  //   console.log(key);
+  //   const dataSource = [...this.state.dataSource];
+  //   this.setState({
+  //     dataSource: dataSource.filter((item) => item.id !== key),
+  //   });
+  //   //通过接口将数据库中的数据删除
+  //   let url = 'https://www.youlewazi.top:1234/delete';
+  //   fetch(url, {
+  //     method: 'post',
+  //     body: JSON.stringify({ id: key }),
+  //     headers: {
+  //       "Access-Control-Allow-Origin": "*",
+  //       'content-type': 'application/json',
+  //     },
+  //     mode: 'cors'
+  //   })
+  // };
 
   //添加
   handleAdd = () => {

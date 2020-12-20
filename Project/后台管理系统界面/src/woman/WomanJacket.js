@@ -126,7 +126,7 @@ class WomanJacket extends React.Component {
         dataIndex: 'operation',
         render: (text, record) =>
           this.state.dataSource.length >= 1 ? (
-            <a onClick={() => this.handleDelete(record.id)}>Delete</a>
+            <a onClick={()=>fetch('https://www.youlewazi.top:1234/delete'+{record}.record).then(this.props.history.go(0))}>Delete</a>
           ) : null,
       },
     ];
