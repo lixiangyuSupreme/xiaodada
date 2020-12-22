@@ -1,0 +1,31 @@
+<button style="margin-left:5px;width:70px;height:100px" bindtap="cat" class="dog">返回</button>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<scroll-view scroll-y="true">
+  <view class="detail">
+    <text class="title">毛衣专区</text>
+  </view>
+  <view class="separate"></view>
+
+  <text>搭配详情</text>
+  <text>【高领毛衣+背带裙+小皮鞋】</text>
+  <block wx:for-items="{{detailImg}}" wx:key="name">
+    <image class="image_detail" src="{{item}}" />
+  </block>
+  <!-- <text>【大衣+连衣裙】</text> -->
+  <text>【毛衣+半身裙+马丁靴】</text>
+  <block wx:for-items="{{detailImg1}}" wx:key="name">
+    <image class="image_detail" src="{{item}}" />
+  </block>
+  <!-- <text>【小西服+衬衫+马丁靴/小西服+打底衫+休闲裤】</text> -->
+  <text>【毛衣开衫+牛仔裤+豆豆鞋】</text>
+  <block wx:for-items="{{detailImg2}}" wx:key="name">
+    <image class="image_detail" src="{{item}}" />
+  </block>
+  <view class="temp"></view>
+</scroll-view>
