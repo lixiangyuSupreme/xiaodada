@@ -1,0 +1,7 @@
+/* pages/return/return1.wxss */
+.xi{
+  font-size: 10px;
+  font-weight: 100;
+  color:white;
+  background-color: green;
+}

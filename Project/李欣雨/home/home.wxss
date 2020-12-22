@@ -1,0 +1,93 @@
+/* pages/home/home.wxss */
+page {
+  /* background: linear-gradient(rgb(141, 166, 173), rgb(235, 235, 236)); */
+  background-color: #e6eaf6;
+  
+} 
+/* .page__bd{
+  border-bottom: 3px soild rgb(223, 180, 180);
+} */
+.tab-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rpx 0;
+  
+}
+ 
+.tab-container .default {
+  margin-right: 25rpx;
+  padding: 5rpx 15rpx;
+}
+ 
+
+.active{
+  color: rgb(149, 150, 155);
+  border-bottom: 2px solid rgb(77, 76, 76);
+}
+.header {
+  position: relative;
+  height:300rpx;
+  background: linear-gradient(to bottom, #e6eaf6, #94a5ad);
+}
+
+.bg_ware {
+  position: absolute;
+  left: 0;
+  bottom: -2rpx;
+  width: 100%;
+  mix-blend-mode: screen;
+  height: 120rpx;
+}
+
+
+
+
+
+
+
+
+/* .zypb{
+  
+  width:240px;
+  height:1000px;
+  display: flex;
+  flex-direction: row;
+   flex-wrap: wrap;
+   */
+  /* align-content:space-around; 
+float: left;
+align-items:flex-start */
+/* }
+.index{
+  /* display:flex; */
+  /* flex-wrap: wrap; 
+}
+.zyp{ */
+  /* float:right;
+  margin-top: -100px;
+  margin-left: 150px;
+  margin-top:-670px
+} */ 
+
+.zypb{
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap; 
+  /*flex-flow相当于 flex-direction和flex-wrap两个属性的组合*/
+  /* flex-flow: row wrap; */
+  align-content:space-around;
+  float:left
+  }
+
+.idx{
+  display:flex;
+  font-size: 35rpx;
+  text-align: center;  
+  
+  padding-top: 10rpx;
+  
+  
+}
+
+

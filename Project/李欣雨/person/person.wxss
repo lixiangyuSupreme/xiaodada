@@ -1,0 +1,7 @@
+/* pages/person/person.wxss */
+page{
+  background-color:#e6eaf6;
+}
+.top{
+  margin-top: -60px;
+}

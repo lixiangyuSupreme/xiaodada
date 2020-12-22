@@ -1,0 +1,226 @@
+page {
+  background-color: #e6eaf6;
+}
+.search{
+  width: 80%;
+}
+.search_arr {
+  border: 1px solid #d0d0d0;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+  margin-top:10px;
+}
+.search_arr input{
+  margin-left: 60rpx;
+  height: 60rpx;
+  border-radius: 5px;
+}
+.bc_text {
+  line-height: 68rpx;
+  height: 68rpx;
+  margin-top: 34rpx;
+}
+ 
+.sousuo {
+  margin-left: 15rpx;
+  width: 5%;
+  line-height: 100%;
+  
+  text-align: center;
+  border: 1px solid #d0d0d0;
+  border-radius: 10rpx;
+  height:30px;
+  margin-top:9px;
+}
+.ss{
+  font-size: 15px;
+  margin-left: -12px;
+  margin-top:50px;
+}
+.page_row{
+  display: flex;
+  flex-direction: row
+}
+.searchcion {
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  position: absolute;
+  left:25rpx;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+
+.weui-search-bar {
+  position: relative;
+  padding: 8px 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #f4eff1;
+  border-top: 1rpx solid #D7D6DC;
+  border-bottom: 1rpx solid #D7D6DC;
+}
+
+.weui-icon-search {
+  margin-right: 4px;
+  font-size: inherit;
+}
+
+.weui-icon-search_in-box {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+
+.weui-search-bar__text {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.weui-search-bar__form {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  flex: auto;
+  border-radius: 5px;
+  background: #FFFFFF;
+  border: 1rpx solid #E6E6EA;
+}
+
+.weui-search-bar__box {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.weui-search-bar__input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.weui-search-bar__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 3px;
+  text-align: center;
+  color: #9B9B9B;
+  background: #FFFFFF;
+  line-height: 28px;
+}
+
+.weui-search-bar__cancel-btn {
+  margin-left: 10px;
+  line-height: 28px;
+  color: #09BB07;
+  white-space: nowrap;
+}
+
+
+
+/* 1. 设置整个页面的背景颜色 */
+page {
+  background: #f5f5f5;
+  /* 避免左侧Item不够时 被白色覆盖*/
+}
+
+/* 2.主盒子 */
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  /* 背景颜色 */
+}
+
+/* 3.左盒子*/
+/* 3.1. 左侧栏主盒子总体设置 */
+.nav_left {
+  position: absolute;
+  /* 使用绝对定位 */
+  top: 50px;
+  /* 距离上边距：0px */
+  left: 0px;
+  /* 距离左边距：0px */
+  width: 25%;
+  /* 每个item所占的宽度 */
+  background: #f5f5f5;
+  /* 主盒子设置背景色为灰色 */
+  text-align: center;
+  /* 文字居中显示 */
+}
+
+/* 3.2. 左侧栏的每个item */
+.nav_left .nav_left_items {
+  height: 40px;
+  /* 每个item高40px*/
+  padding: 6px 0;
+  /* 上内边距和下内边距是 6px[增加高度] 右内边距和左内边距是 0px*/
+  border-bottom: 1px solid #dedede;
+  /* 设置下边线 */
+  font-size: 14px;
+  /* 设置文字大小：14px */
+}
+
+/* 3.3. 左侧栏list的item被选中时*/
+.nav_left .nav_left_items.active {
+  background: #fff;
+  /* 背景色变成白色 */
+  color: #3385ff;
+  /* 字体编程蓝色 */
+  border-left: 3px solid #3385ff;
+  /* 设置边框的宽度以及颜色 */
+}
+
+/* 4.右盒子 */
+/* 4.1. 右侧栏主盒子总体设置 */
+.nav_right {
+  position: absolute;
+  /* 使用绝对定位 */
+  top: 50px;
+  /* 距离上边距：0px */
+  left: 80px;
+  /* 距离左边距：80px */
+  width: 75%;
+  /* 右侧主盒子所占宽度 */
+  height: 600px;
+  /* 右侧主盒子所占高度 */
+  padding: 10px;
+  /* 所有 4 个内边距都是 10px*/
+  box-sizing: border-box;
+  /* 为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制*/
+  background-color: #e6eaf6;
+  /* 右侧主盒子背景颜色 */
+}
+
+/* 4.2. 右侧栏中的每个item */
+.nav_right .nav_right_items {
+  margin-left: 20px;
+  height: 75px;
+  margin-top: 10px;
+}
+
+/* 4.3. 右侧栏中的每个item的图样式设置 */
+.nav_right .nav_right_items image {
+  width: 60px;
+  /* 给图片设置宽度 */
+  height: 60px;
+  /* 给图片设置高度 */
+  /* margin-top: 15px; */
+  /* 图片距离上边距15px */
+  /* border-radius: 40%; */
+  /* 给图片添加圆角边框 */
+}
+.nav_right .nav_right_items text{
+  margin-left: 20px;
+  /* margin: 20px; */
+}
