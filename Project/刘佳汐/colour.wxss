@@ -1,0 +1,71 @@
+/* pages/colour/colour.wxss */
+.donghua image{width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top: -100rpx;
+}
+.top{
+  margin-top: -50px;
+}
+.all{
+  float: left;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.yellow{
+  width: 45px;
+  height: 45px;
+  background-color: yellow;
+  border-radius: 60rpx;
+  float: left;
+}
+.red{
+  width: 45px;
+  height: 45px;
+  background-color: red;
+  border-radius: 60rpx;
+  float: left;
+  margin-left: 20px;
+}
+.blue{
+  width: 45px;
+  height: 45px;
+  background-color: blue;
+  border-radius: 60rpx;
+  float: left;
+  margin-left: 20px;
+}
+.brown{
+  width: 45px;
+  height: 45px;
+  background-color: brown;
+  border-radius: 60rpx;
+  float: left;
+  margin-left: 20px;
+}
+.catalog{
+  float: left;
+}
+.adjacent{
+  float: left;
+  width: 100%;
+}
+.homochromatic{
+  float: left;
+  width: 100%;
+}
+.complementary{
+  float: left;
+  width: 100%;
+}
+.colourless{
+  float: left;
+  width: 100%;
+}
+.text{
+      width: 440px;
+      margin: 30px 0px 30px 0px;
+      font: bold 20px/100% "微软雅黑", "Lucida Grande", "Lucida Sans", Helvetica, Arial, Sans;
+      color: rgb(57, 153, 185);
+      text-transform: uppercase;
+}
