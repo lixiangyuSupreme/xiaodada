@@ -1,0 +1,56 @@
+<view class="liu">
+  
+  <div style="float:left; width:300px">
+    <div style="float:left;width:200px;margin-left:5px">
+      <button bindtap="return" class="re" style="margin-right:2px;margin-top: 1px;width:65px;height:30px;"><span style="width:30px"> 返回 </span></button>
+    </div>
+    
+  </div>
+</view>
+
+<!-- 下拉列表 -->
+<view class='top'>
+    <view class='top-text'> 选择衣服类别：</view>
+    <!-- 下拉框 -->
+    <view class='top-selected' bindtap='bindShowMsg'>
+      <text>{{grade_name}}</text>
+      <image class="img2" src='../../icon/sanjiao.png'></image>
+    </view>
+    <!-- 下拉需要显示的列表 -->
+    <view class="select_box" wx:if="{{select}}">
+      <view wx:for="{{grades}}" wx:key="unique">
+        <view class="select_one" bindtap="mySelect" data-name="{{item}}">{{item}}</view>
+      </view>
+    </view>
+  </view>
+
+<!-- 弹窗 -->
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet" >
+	<action-sheet-item >
+    <text>保留此次编辑？</text>
+	</action-sheet-item>
+  <div style="float:left; width:300px">
+    <div style="float:left;width:152px;margin-left:5px"><button bindtap="confirmInput">确认</button></div>
+    <div style="float:left;width:152px;margin-left:5px"><button bindtap="show">取消</button></div>
+  </div>
+</action-sheet>
+<view class='page'>
+ <textarea id="content" class='text' bindinput="changeInput" placeholder="这一刻的想法..." auto-height><view>{{txt}}</view></textarea>
+ <view class="image_content">
+  <view class='image' wx:for="{{img_url}}">
+    <image class="moment_img" src="{{item}}" bindtap="chooseimage"></image>
+  </view>
+  <view class='image' style='display:{{hideAdd?"none":"block"}}'>
+    <image bindtap="chooseimage" class="moment_img" src='../../icon/add.jpg' ><view>{{txt1}}</view></image>
+  </view>
+ </view>
+ <view class="section">
+   <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+     <view class="picker">所在位置(可选)：{{region[0]}}，{{region[1]}}，{{region[2]}}</view>
+    </picker>
+  </view>
+</view>
+<view style="margin-right: 60px;">
+  <div style="width:100px;"><button bindtap="send" class="sub" 
+    style="background-color: #94a5ad;border-radius: 10rpx;width:200px;height:35px;font-size: 15px;font-family:inherit;">发　　布</button></div>
+</view>
