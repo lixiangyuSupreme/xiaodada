@@ -1,0 +1,17 @@
+<h1>今日酷帅潮流</h1>
+<textarea style="padding:0rpx 20rpx 0rpx 40rpx; height:210px">
+  酷帅潮流风又称嘻哈风，美国是嘻哈发源地,为主流穿法，低调极简的曰式嘻哈属于小众潮流。美东纽约一带由于主流品牌，如seanjohn、mecca逐渐调整品牌策略和设计风格，穿着搭配更注重精致感。
+  美国的嘻哈非常生活化，对品牌没什么要求，却强烈要求个人风格。嘻哈穿着风格一直在转变。以当前纽约流行来说，宽松依旧，但不用过于松垮。要穿得好看、简单、干净即可。
+</textarea>
+<view class='content'>
+  <view class='left' bindtap="x">
+    <block wx:for="{{leftList}}" wx:key="index">
+      <image class='pic' style='height:{{item.CoverHeight}}' src='{{item.Cover}}'></image>
+    </block>
+  </view>
+  <view class='right' bindtap="x">
+    <block wx:for="{{rightList}}" wx:key="index">
+      <image class='pic' style='height:{{item.CoverHeight}}' src='{{item.Cover}}'></image>
+    </block>
+  </view>
+</view>

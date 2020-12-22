@@ -1,0 +1,19 @@
+<h1>今日灵动俏皮</h1>
+<textarea style="padding:0rpx 20rpx 0rpx 40rpx; height:230px">
+  灵动俏皮风又称洛丽塔风，主要有三大类：
+  一、SweetLoveLolita———以粉红、粉蓝、白色等粉色系列为主，衣料选用大量蕾丝，在印花主题上多为甜点、兔子、熊等。
+  二、GothicLolita———多数是黑和白色，通常配以十字架银器等装饰，以及化较为浓烈的深色妆容，这被称为“哥特式洛丽塔。
+  三、ClassicLolita———以简约色调为主，着重剪裁以表达清雅的心思.荷叶褶是最大特色，整体风格比较平实，适合初心者。
+</textarea>
+<view class='content'>
+  <view class='left' bindtap="x">
+    <block wx:for="{{leftList}}" wx:key="index">
+      <image class='pic' style='height:{{item.CoverHeight}}' src='{{item.Cover}}'></image>
+    </block>
+  </view>
+  <view class='right' bindtap="x">
+    <block wx:for="{{rightList}}" wx:key="index">
+      <image class='pic' style='height:{{item.CoverHeight}}' src='{{item.Cover}}'></image>
+    </block>
+  </view>
+</view>

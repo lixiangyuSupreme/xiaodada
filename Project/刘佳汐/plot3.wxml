@@ -1,0 +1,16 @@
+<h1>今日休闲工装</h1>
+<textarea style="padding:0rpx 20rpx 0rpx 40rpx; height:230px">
+  工装风是美式复古风格中一种重要的分支，在美国18到19世纪时，美国的工厂多不胜数，工人们统一穿着工作服，延续到今天就衍变成为潮流时尚的工装风格。在服饰用色方面，延续了过去工装风的色彩风格，多以军绿色、蓝色、棕色为主。工装风服饰款式简洁，像牛仔外套、飞行夹克以及工装裤等都是带有鲜明的工装风特点，看起来非常整洁且有质感。工装风的受众范围广泛，在穿着年龄以及身材没有什么限制，男女老少都可以尝试。
+</textarea>
+<view class='content'>
+  <view class='left' bindtap="x">
+    <block wx:for="{{leftList}}" wx:key="index">
+      <image class='pic' style='height:{{item.CoverHeight}}' src='{{item.Cover}}'></image>
+    </block>
+  </view>
+  <view class='right' bindtap="x">
+    <block wx:for="{{rightList}}" wx:key="index">
+      <image class='pic' style='height:{{item.CoverHeight}}' src='{{item.Cover}}'></image>
+    </block>
+  </view>
+</view>

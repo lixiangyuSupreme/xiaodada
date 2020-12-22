@@ -1,0 +1,18 @@
+<h1>今日复古文艺</h1>
+<textarea style="padding:0rpx 20rpx 0rpx 40rpx; height:210px">
+  复古风主要包含校园风以及宫廷复古风.
+  校园风：细长的条纹，针织开衫的对襟处，衬衣的领口袖口，或是板鞋鞋底。大喇叭裤，蝙蝠袖不规则图案上衣，和复古甜美风的大蝴蝶结铆钉，亮片都是disco风潮的元素之一。
+  宫廷复古风：蕾丝、绸缎、雪纺、真丝注定和女性的服饰有着亲密的关系。从与内衣牵手实现性感定位之后，逐渐向服饰外延扩张，如今正走在时尚浪潮的前锋，给人不尽的遐想与惊艳。
+</textarea>
+<view class='content'>
+  <view class='left' bindtap="x">
+    <block wx:for="{{leftList}}" wx:key="index">
+      <image class='pic' style='height:{{item.CoverHeight}}' src='{{item.Cover}}'></image>
+    </block>
+  </view>
+  <view class='right' bindtap="x">
+    <block wx:for="{{rightList}}" wx:key="index">
+      <image class='pic' style='height:{{item.CoverHeight}}' src='{{item.Cover}}'></image>
+    </block>
+  </view>
+</view>

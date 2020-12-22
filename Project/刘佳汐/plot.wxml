@@ -1,0 +1,19 @@
+<h1>今日气质名媛</h1>
+<textarea style="padding:0rpx 20rpx 0rpx 40rpx; height:210px">
+气质名媛风是比较优雅高贵的风格，穿搭上比较优雅和简单，更加淑女，主要能够强调出一个人的品位。不管时尚怎么流行，气质名媛风是永不过时的。
+想要穿出名媛气质，连衣裙是首当其冲的利器。不过在选择上可是要多花工夫哦，想要把连衣裙穿出名媛气质，样式不能过于简单，裁剪需要得体，衣服料子更有质感。有的名媛风格的连衣裙可能会一些花边或者领子，绝对不能繁琐。
+</textarea>
+<view class='content'>
+  <view class='left' bindtap="x">
+    <block wx:for="{{leftList}}" wx:key="index">
+      <image class='pic' style='height:{{item.CoverHeight}}' src='{{item.Cover}}'></image>
+    </block>
+  </view>
+  <view class='right' bindtap="x">
+    <block wx:for="{{rightList}}" wx:key="index">
+      <image class='pic' style='height:{{item.CoverHeight}}' src='{{item.Cover}}'></image>
+    </block>
+  </view>
+</view>
+
+
